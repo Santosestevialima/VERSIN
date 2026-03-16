@@ -44,44 +44,6 @@ Banco de dados
 Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
 
 ## 1. Clonar o repositório
-# VERSIN
-
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
-
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
-
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
-
----
-
-# Objetivo do projeto
-
-O VERSIN busca criar um ambiente onde:
-
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
-
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
-
----
-
-# Tecnologias utilizadas
-
-Atualmente o projeto utiliza as seguintes tecnologias:
-
-Frontend
-- Next.js
-- React
-- TailwindCSS
-
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
-
-Banco de dados
-- MySQL
 
 ---
 

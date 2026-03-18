@@ -1,0 +1,115 @@
+# ============================================================
+# VERSIN · Docker Compose · Ambiente de Desenvolvimento
+# ============================================================
+# Serviços:
+#   mysql      → Banco de dados MySQL 8          (porta 3306)
+#   backend    → API Python + FastAPI            (porta 8000)
+#   frontend   → App Next.js + Tailwind CSS      (porta 3000)
+#   phpmyadmin → Interface visual do banco       (porta 8080)
+# ============================================================
+
+services:
+
+  # ----------------------------------------------------------
+  # BANCO DE DADOS
+  # ----------------------------------------------------------
+  mysql:
+    image: mysql:8.0
+    container_name: versin_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d   # roda os SQLs na 1ª inicialização
+    networks:
+      - versin_net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ----------------------------------------------------------
+  # BACKEND — Python + FastAPI
+  # ----------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: versin_backend
+    restart: unless-stopped
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app          # hot-reload: alterações refletem sem rebuild
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - versin_net
+
+  # ----------------------------------------------------------
+  # FRONTEND — Next.js + Tailwind CSS
+  # ----------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: versin_frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app         # hot-reload
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    networks:
+      - versin_net
+
+  # ----------------------------------------------------------
+  # phpMyAdmin — Interface visual para o banco
+  # ----------------------------------------------------------
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: versin_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - versin_net
+
+# ----------------------------------------------------------
+# Volumes e Redes
+# ----------------------------------------------------------
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  versin_net:
+    driver: bridge

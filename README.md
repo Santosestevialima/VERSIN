@@ -1,295 +1,121 @@
-# VERSIN
+🚀 VERSIN
 
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
+Social app for ideas and collaborative thinking
 
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
+📌 Sobre o Projeto
 
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
+O VERSIN é uma plataforma voltada para compartilhamento de ideias e colaboração entre usuários.
+O sistema é dividido em:
 
----
+🧠 Back-end: API desenvolvida com FastAPI
 
-# Objetivo do projeto
+🎨 Front-end: Interface do usuário
 
-O VERSIN busca criar um ambiente onde:
+🗄️ Banco de dados
 
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
+🐳 Docker: ambiente padronizado para execução do projeto
 
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
+O objetivo é permitir que qualquer desenvolvedor consiga rodar o projeto localmente sem precisar configurar tudo manualmente.
 
----
+🧱 Estrutura do Projeto
+VERSIN/
+│
+├── backend/        → API (FastAPI)
+├── frontend/       → Interface do usuário
+├── database/       → Configurações de banco
+├── docker/         → Configurações de container
+├── docs/           → Documentação
+├── scripts/        → Scripts auxiliares
+│
+├── docker-compose.yml → Orquestra os containers
+├── README.md
+└── .gitignore
 
-# Tecnologias utilizadas
+⚙️ Pré-requisitos
 
-Atualmente o projeto utiliza as seguintes tecnologias:
+Antes de começar, você precisa ter instalado:
 
-Frontend
-- Next.js
-- React
-- TailwindCSS
+Docker
+Docker Compose
+Git
 
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
+🐳 Como rodar o projeto (Docker)
+🔹 Primeira vez
+docker compose up --build
+ou
+docker-compose up --build
 
-Banco de dados
-- MySQL
+👉 Isso vai:
 
----
+construir os containers
+instalar dependências
+subir backend, frontend e banco
 
-# Como rodar o projeto na sua máquina
+🔹 Execuções seguintes
+docker compose up
+🔹 Parar o projeto
+docker compose down
 
-Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
+🌐 Acessos do sistema
 
-## 1. Clonar o repositório
-# VERSIN
+Após subir o Docker, você poderá acessar:
 
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
-
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
-
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
-
----
-
-# Objetivo do projeto
-
-O VERSIN busca criar um ambiente onde:
-
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
-
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
-
----
-
-# Tecnologias utilizadas
-
-Atualmente o projeto utiliza as seguintes tecnologias:
-
-Frontend
-- Next.js
-- React
-- TailwindCSS
-
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
-
-Banco de dados
-- MySQL
-
----
-
-# Como rodar o projeto na sua máquina
-
-Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
-
-## 1. Clonar o repositório
-# VERSIN
-
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
-
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
-
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
-
----
-
-# Objetivo do projeto
-
-O VERSIN busca criar um ambiente onde:
-
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
-
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
-
----
-
-# Tecnologias utilizadas
-
-Atualmente o projeto utiliza as seguintes tecnologias:
-
-Frontend
-- Next.js
-- React
-- TailwindCSS
-
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
-
-Banco de dados
-- MySQL
-
----
-
-# Como rodar o projeto na sua máquina
-
-Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
-
-## 1. Clonar o repositório
-# VERSIN
-
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
-
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
-
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
-
----
-
-# Objetivo do projeto
-
-O VERSIN busca criar um ambiente onde:
-
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
-
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
-
----
-
-# Tecnologias utilizadas
-
-Atualmente o projeto utiliza as seguintes tecnologias:
-
-Frontend
-- Next.js
-- React
-- TailwindCSS
-
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
-
-Banco de dados
-- MySQL
-
----
-
-# Como rodar o projeto na sua máquina
-
-Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
-
-## 1. Clonar o repositório
-# VERSIN
-
-VERSIN é uma rede social experimental voltada para ideias futuristas, pesquisas, projetos e conexões entre pessoas curiosas e criativas.
-
-A proposta do projeto é criar um ambiente onde pessoas possam compartilhar pensamentos, colaborar em projetos e descobrir novas ideias em conjunto.
-
-Este projeto está sendo desenvolvido de forma colaborativa e atualmente encontra-se em suas primeiras versões. A estrutura, as tecnologias e as funcionalidades continuarão evoluindo conforme o desenvolvimento do sistema avança.
-
----
-
-# Objetivo do projeto
-
-O VERSIN busca criar um ambiente onde:
-
-- Ideias possam ser compartilhadas
-- Pessoas possam colaborar em projetos
-- Pesquisas e conceitos possam ser discutidos
-- Mentes curiosas possam se conectar
-
-A ideia é construir uma rede voltada para criatividade, conhecimento e inovação.
-
----
-
-# Tecnologias utilizadas
-
-Atualmente o projeto utiliza as seguintes tecnologias:
-
-Frontend
-- Next.js
-- React
-- TailwindCSS
-
-Backend
-- Python
-- Django ou FastAPI (em definição conforme evolução do projeto)
-
-Banco de dados
-- MySQL
-
----
-
-# Como rodar o projeto na sua máquina
-
-Para testar ou contribuir com o projeto localmente, siga os passos abaixo.
-
-## 1. Clonar o repositório
-git clone https://github.com/santosestevialima/VERSIN.git
-
-
-## 2. Entrar na pasta do projeto
-cd VERSIN
-
-## 3. Instalar as dependências do frontend
-cd frontend
-npm install
-
-## 4. Rodar o servidor de desenvolvimento
-npm run dev
-
-Depois disso, abra no navegador:
-
+🎨 Front-end:
 http://localhost:3000
 
+🧠 Back-end (API):
+http://localhost:8000
 
----
+📚 Documentação da API (Swagger):
+http://localhost:8000/docs
 
-# Estrutura básica do projeto
-VERSIN
-│
-├── frontend
-│ └── src
-│ └── app
-│ ├── feed
-│ ├── messages
-│ ├── profile
-│ └── components
-│
-├── backend
-│
-└── docs
+🗄️ phpMyAdmin (se configurado):
+http://localhost:8080
 
+👨‍💻 Fluxo de desenvolvimento
+🔹 Front-end
 
-Essa estrutura organiza o projeto entre frontend, backend e documentação.
+Trabalha na pasta /frontend
 
----
+Visualiza alterações em localhost:3000
 
-# Status do projeto
+🔹 Back-end
 
-O projeto encontra-se em fase inicial de desenvolvimento.
+Trabalha na pasta /backend
 
-As primeiras versões estão sendo estruturadas e novas funcionalidades serão adicionadas progressivamente.
+Testa endpoints em localhost:8000/docs
 
-Mudanças na arquitetura, melhorias de interface e novas integrações ainda serão implementadas conforme o projeto evolui.
+🔄 Atualizar o projeto
 
----
+Sempre que alguém subir código novo:
 
-# Contribuições
+git pull
+docker compose up --build
 
-Contribuições são bem-vindas.
+🧠 Boas práticas
 
-Caso queira contribuir com o projeto:
+Criar novas features em branches
+Usar Pull Requests para integração
+Evitar subir código direto na master
 
-- abra uma issue
-- sugira melhorias
-- participe do desenvolvimento
+🐳 Sobre o Docker
 
----
+O projeto utiliza Docker para:
 
-# Licença
+padronizar ambiente
 
-Este projeto está sendo desenvolvido para fins educacionais e experimentais.
+evitar conflitos de dependências
+
+facilitar execução em qualquer máquina
+
+💡 Observações
+
+O backend utiliza FastAPI com Uvicorn
+O modo atual está em desenvolvimento (--reload)
+Para produção, ajustes serão necessários
+
+👥 Colaboradores
+Equipe VERSIN 🚀
+
+✨ Status do Projeto
+🟢 Em desenvolvimento

@@ -1,0 +1,40 @@
+.post-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    background-color: #a3a7a2;
+    color:aliceblue;
+}
+
+.post-user {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.post-content {
+    margin: 10px 0;
+    color: #eff3ee;
+}
+.post-date {
+    font-size: 12px;
+    color: rgb(56, 58, 56);
+}
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.post-actions  button{
+    padding: 10x 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #edf0f4;
+    color: rgb(135, 153, 117);
+    cursor: pointer;
+}
+
+.post-actions button:hover {
+    background-color: #323433;
+}
